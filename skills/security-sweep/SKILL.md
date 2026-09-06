@@ -1,6 +1,9 @@
 ---
 name: security-sweep
 description: Pre-ship security review for web apps and APIs, plus an Australian regulatory compliance lens (Privacy Act/APPs, NDB, health data, Essential Eight). Use this skill BEFORE any deploy, release, or "ship it" moment, whenever the user asks to review code for security, audit an endpoint or feature, check a PR, or mentions shipping, launching, deploying, or going live — even if they don't say the word "security". Also use when reviewing anything touching auth, payments, email sending, user data, or Supabase/Postgres access patterns.
+version: 0.3.0
+metadata:
+  last-reviewed: 2026-09-06
 ---
 
 # Security Sweep
@@ -57,6 +60,8 @@ Apply when the product handles personal information of Australians. This is a re
 - **NDB scheme:** if this data leaked, would it likely cause serious harm? If yes, confirm there's a way to even *detect* a breach (logging, monitoring) — you can't notify what you can't see.
 - **Health information** (e.g. medical charts, health app data): treated as sensitive information under the Privacy Act — higher bar for consent and security; check whether My Health Records Act obligations could apply before touching MHR data.
 - **Essential Eight (proportionate):** for a solo SaaS, the relevant subset is patching (dependency currency), MFA on admin surfaces (hosting, DB, domain registrar, email), restricted admin privileges, and backups — verified restorable, not just configured.
+
+Framework references in this section verified 6 September 2026 against OAIC guidance and legislation.gov.au.
 
 ## Report format
 
